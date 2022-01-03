@@ -3,7 +3,7 @@ Bajak laut dan Harta Karun yang Hilang merupakan game action (petualangan) denga
 
 # Cara install di Laptop/PC
 ## 1. Install Godot engine dahulu, link : https://godotengine.org/
-## 2. Downoad yang tanpa C#
+## 2. Download yang tanpa C#
 ## 3. Buka Godot Engine, kemudian klik import dan pilih project.godot
 ## 4. Silahkan bermain, I hope You Enjoy IT :D
 
