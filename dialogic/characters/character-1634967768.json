@@ -1,0 +1,20 @@
+{
+	"color": "#ffb3a183",
+	"description": "This is Hero or Captain Clown Nose",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1634967768.json",
+	"mirror_portraits": true,
+	"name": "Hero",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 70,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://assets/Captain Clown Nose/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png"
+		}
+	],
+	"scale": 25
+}

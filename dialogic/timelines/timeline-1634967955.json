@@ -1,0 +1,79 @@
+{
+	"events": [
+		{
+			"character": "character-1634967768.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hai, namaku Captain Clown Nose atau kalian bisa panggil aku Hero"
+		},
+		{
+			"character": "character-1634967768.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Aku dulu adalah Kapten Bajak Laut terkenal."
+		},
+		{
+			"character": "character-1634967768.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tapi karena \"Black Pearl\" ku dicuri oleh Flying Dutchman."
+		},
+		{
+			"character": "character-1634967768.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Aku harus menunda tujuanku untuk mencari Harta Karun."
+		},
+		{
+			"character": "character-1634967768.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tapi dengan bantuanmu mungkin kita bisa menemukannya tanpa \"Black Pearl\" ku."
+		},
+		{
+			"character": "character-1634967768.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Apakah kamu mau?"
+		},
+		{
+			"choice": "Ayo!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://Level1.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "Nggak lah...",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1634967768.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmmm...Kenapa nggak ? :("
+		},
+		{
+			"change_scene": "res://Title.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1634967955.json",
+		"name": "Intro"
+	}
+}

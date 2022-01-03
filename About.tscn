@@ -1,0 +1,123 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://TilesetPadat.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/Palm Tree Island/Background/Additional Sky.png" type="Texture" id=2]
+[ext_resource path="res://assets/Palm Tree Island/Background/BG Image.png" type="Texture" id=3]
+[ext_resource path="res://assets/Palm Tree Island/Background/Big Clouds.png" type="Texture" id=4]
+[ext_resource path="res://AboutContainer.gd" type="Script" id=5]
+[ext_resource path="res://assets/keymap-2.png" type="Texture" id=6]
+[ext_resource path="res://PopupButton.tres" type="StyleBox" id=7]
+[ext_resource path="res://assets/esc-1.png" type="Texture" id=8]
+[ext_resource path="res://assets/Minecraft.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://assets/music/Retro Beat.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/Wood and Paper UI/Sprites/Prefabs/1.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 64, 64 )
+margin_left = 17.0
+margin_right = 17.0
+margin_top = 18.0
+margin_bottom = 17.0
+
+[sub_resource type="DynamicFont" id=3]
+size = 15
+font_data = ExtResource( 9 )
+
+[node name="About" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 2
+collision_mask = 4
+format = 1
+tile_data = PoolIntArray( 0, 8, 0, 1, 8, 0, 2, 8, 0, 3, 8, 0, 4, 8, 0, 5, 8, 0, 6, 8, 0, 7, 8, 0, 8, 8, 0, 9, 8, 0, 10, 8, 0, 11, 8, 0, 12, 8, 0, 458752, 47, 0, 458753, 3, 0, 458754, 3, 0, 458755, 3, 0, 458756, 3, 0, 458757, 3, 0, 458758, 3, 0, 458759, 3, 0, 458760, 3, 0, 458761, 3, 0, 458762, 3, 0, 458763, 3, 0, 458764, 3, 0 )
+
+[node name="BG Image" type="Sprite" parent="."]
+position = Vector2( 200.14, 163 )
+scale = Vector2( 1.10864, 1 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Additional Sky" type="Sprite" parent="."]
+position = Vector2( 202.494, 66 )
+scale = Vector2( 13.1566, 2.1875 )
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="Big Clouds" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.486275 )
+position = Vector2( 255, 71 )
+z_index = -1
+texture = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AboutContainer" type="VBoxContainer" parent="CanvasLayer"]
+margin_left = 131.035
+margin_top = 181.511
+margin_right = 182.035
+margin_bottom = 221.511
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="Button" parent="CanvasLayer/AboutContainer"]
+visible = false
+margin_right = 51.0
+margin_bottom = 18.0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 7 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Back"
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+margin_left = 3.47192
+margin_top = 35.0
+margin_right = 318.472
+margin_bottom = 193.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+margin_left = 112.512
+margin_top = 13.1066
+margin_right = 196.512
+margin_bottom = 29.1066
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Cara Main"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="esc-1" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 157.508, 207.261 )
+scale = Vector2( 0.191944, 0.166459 )
+texture = ExtResource( 8 )
+
+[node name="keymap-2" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 159.94, 118.438 )
+scale = Vector2( 0.168726, 0.195598 )
+texture = ExtResource( 6 )
+
+[node name="TitleScreenMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -12.0
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/AboutContainer/About" to="CanvasLayer/AboutContainer" method="_on_About_pressed"]
